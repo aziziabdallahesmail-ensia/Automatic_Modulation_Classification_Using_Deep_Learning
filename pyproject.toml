@@ -1,0 +1,24 @@
+[project]
+name = "deep-learning-for-signal-modulation"
+version = "0.1.0"
+description = "Download RadioML and save reproducible training, validation, and test splits"
+readme = "README.md"
+authors = [
+    { name = "aziziabdallahesmail-ensia", email = "abdellah.esmail.azizi@ensia.edu.dz" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "kagglehub>=0.3",
+    "numpy>=1.26",
+    "scikit-learn>=1.4",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[project.scripts]
+deep-learning-for-signal-modulation = "deep_learning_for_signal_modulation.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"

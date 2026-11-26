@@ -68,4 +68,38 @@ Disjoint frame IDs alone do not establish independence between related captures.
 
 Only unpickle trusted datasets. Raw data and saved splits are ignored by Git.
 
+## EDA, Preprocessing & VT-CNN2 Baseline (Tasks 1–3)
+
+Install the additional EDA, visualization, and PyTorch baseline dependencies:
+
+```bash
+pip install -r requirements-eda-baseline.txt
+```
+
+Run Task 1 & 2 Exploratory Data Analysis and generate signal figures (`artifacts/eda/`):
+
+```bash
+python scripts/run_eda.py
+```
+
+Run Task 3 validation-only normalization comparison (`raw`, `l2_frame`, `rms_frame`, `channel_zscore`), train the Table 1 Reference `VT-CNN2` baseline with early stopping (`patience=10`), and evaluate once on the untouched test split (`artifacts/baseline/`):
+
+```bash
+python scripts/run_baseline.py
+```
+
+Generate the structured Markdown report and interactive Jupyter notebook:
+
+```bash
+python scripts/generate_report.py
+python scripts/build_notebook.py
+```
+
+Run unit tests for label encoding, leakage-free normalization, split auditing, and `VT-CNN2` architecture shapes:
+
+```bash
+pytest -v tests/test_pipeline.py
+```
+
+
 

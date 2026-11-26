@@ -1,0 +1,14 @@
+# Core dataset download/split dependencies (also in pyproject.toml)
+kagglehub>=0.3
+numpy>=1.26
+scikit-learn>=1.4
+
+# EDA, signal processing, visualization, and PyTorch baseline dependencies
+matplotlib>=3.8
+pandas>=2.2
+pytest>=8.0
+scipy>=1.12
+seaborn>=0.13
+torch>=2.2
+nbformat>=5.10
+jupyterlab>=4.0

@@ -6,8 +6,9 @@ dist/
 wheels/
 *.egg-info
 
-# Virtual environments
+# Virtual environments and IDE metadata
 .venv
+.idea/
 
 # Downloaded data and generated pipeline outputs
 /data/
